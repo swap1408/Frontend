@@ -43,7 +43,7 @@ pipeline {
                         docker rm $CONTAINER_ID || true
                     fi
                     echo "Starting new container..."
-                    docker run -d -p 3000:80 --name ${IMAGE_NAME} ${IMAGE_NAME}:latest
+                    docker run -d -p 80:80 --name ${IMAGE_NAME} ${IMAGE_NAME}:latest
                 '''
             }
         }
